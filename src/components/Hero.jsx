@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { Download, Email, ArrowDownward } from "@mui/icons-material";
 import { motion } from "framer-motion";
-import profile from "../assets/profile.jpg"; 
+import profile from "../assets/profile.jpeg"; // <-- Cambiá el nombre si hace falta
 
 function Hero() {
   return (
