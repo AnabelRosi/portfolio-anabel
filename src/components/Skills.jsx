@@ -1,4 +1,12 @@
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+} from "@mui/material";
+
 import {
   FaPython,
   FaHtml5,
@@ -7,75 +15,160 @@ import {
   FaGithub,
   FaDatabase,
 } from "react-icons/fa";
-import { SiFlask, SiMysql, SiSqlite } from "react-icons/si";
+
+import {
+  SiFlask,
+  SiMysql,
+  SiSqlite,
+  SiJavascript,
+  SiReact,
+} from "react-icons/si";
+
+import SectionTitle from "./SectionTitle";
 
 const skills = [
-  { name: "Python", icon: <FaPython size={45} color="#3776AB" /> },
-  { name: "Flask", icon: <SiFlask size={45} /> },
-  { name: "HTML5", icon: <FaHtml5 size={45} color="#E34F26" /> },
-  { name: "CSS3", icon: <FaCss3Alt size={45} color="#1572B6" /> },
-  { name: "MySQL", icon: <SiMysql size={45} color="#4479A1" /> },
-  { name: "SQLite", icon: <SiSqlite size={45} color="#003B57" /> },
-  { name: "Git", icon: <FaGitAlt size={45} color="#F05032" /> },
-  { name: "GitHub", icon: <FaGithub size={45} /> },
-  { name: "Bases de Datos", icon: <FaDatabase size={45} color="#1976d2" /> },
+  {
+    name: "Python",
+    icon: FaPython,
+    color: "#3776AB",
+  },
+  {
+    name: "Flask",
+    icon: SiFlask,
+    color: "#000000",
+  },
+  {
+    name: "JavaScript",
+    icon: SiJavascript,
+    color: "#F7DF1E",
+  },
+  {
+    name: "React",
+    icon: SiReact,
+    color: "#61DAFB",
+  },
+  {
+    name: "HTML5",
+    icon: FaHtml5,
+    color: "#E34F26",
+  },
+  {
+    name: "CSS3",
+    icon: FaCss3Alt,
+    color: "#1572B6",
+  },
+  {
+    name: "MySQL",
+    icon: SiMysql,
+    color: "#4479A1",
+  },
+  {
+    name: "SQLite",
+    icon: SiSqlite,
+    color: "#003B57",
+  },
+  {
+    name: "Git",
+    icon: FaGitAlt,
+    color: "#F05032",
+  },
+  {
+    name: "GitHub",
+    icon: FaGithub,
+    color: null,
+  },
+  {
+    name: "Bases de Datos",
+    icon: FaDatabase,
+    color: null,
+  },
 ];
 
 function Skills() {
   return (
     <Box
       id="tecnologias"
+      component="section"
       sx={{
-        py: 10,
-        backgroundColor: "#f8fafc",
+        py: { xs: 8, md: 12 },
+        bgcolor: "background.paper",
+        transition: "background-color 0.4s ease",
       }}
     >
       <Container maxWidth="lg">
-        <Typography
-          variant="h3"
-          fontWeight="bold"
-          align="center"
-          gutterBottom
-        >
-          Tecnologías
-        </Typography>
+        <SectionTitle
+          overline="Mi stack"
+          title="Tecnologías"
+        />
 
         <Typography
-          align="center"
           color="text.secondary"
-          sx={{ mb: 6 }}
+          sx={{
+            mb: 6,
+            maxWidth: 650,
+            lineHeight: 1.8,
+          }}
         >
-          Estas son algunas de las tecnologías con las que trabajo actualmente.
+          Tecnologías y herramientas que utilizo para desarrollar aplicaciones
+          web, trabajar con bases de datos y construir soluciones de software.
         </Typography>
 
-        <Grid container spacing={3}>
-          {skills.map((skill) => (
-            <Grid item xs={6} sm={4} md={3} key={skill.name}>
-              <Paper
-                elevation={3}
-                sx={{
-                  p: 4,
-                  textAlign: "center",
-                  borderRadius: 3,
-                  transition: ".3s",
-                  "&:hover": {
-                    transform: "translateY(-8px)",
-                  },
-                }}
-              >
-                {skill.icon}
+        <Grid container spacing={2.5}>
+          {skills.map((skill) => {
+            const Icon = skill.icon;
 
-                <Typography
+            return (
+              <Grid
+                size={{ xs: 6, sm: 4, md: 3 }}
+                key={skill.name}
+              >
+                <Card
+                  elevation={0}
                   sx={{
-                    mt: 2,
-                    fontWeight: "bold",
+                    height: "100%",
+                    textAlign: "center",
+                    border: "1px solid",
+                    borderColor: "divider",
+                    bgcolor: "background.default",
+                    borderRadius: 3,
+                    transition:
+                      "transform .3s ease, border-color .3s ease, box-shadow .3s ease",
+
+                    "&:hover": {
+                      transform: "translateY(-5px)",
+                      borderColor: "primary.main",
+                      boxShadow: "0 8px 20px rgba(0,0,0,0.07)",
+                    },
                   }}
                 >
-                  {skill.name}
-                </Typography>
-              </Paper>
-            </Grid>
-          ))}
+                  <CardContent sx={{ py: 3.5 }}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        mb: 1.5,
+                      }}
+                    >
+                      <Icon
+                        size={45}
+                        color={skill.color || "currentColor"}
+                      />
+                    </Box>
+
+                    <Typography
+                      sx={{
+                        fontWeight: 600,
+                        color: "text.primary",
+                      }}
+                    >
+                      {skill.name}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            );
+          })}
         </Grid>
       </Container>
     </Box>
