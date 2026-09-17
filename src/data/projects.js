@@ -28,7 +28,11 @@ const projects = [
     github: "",
     demo: "",
     private: true,
-    image: "",
+    images: [
+      "/projects/signIA/01.jpeg",
+      "/projects/signIA/02.jpeg",
+      "/projects/signIA/03.jpeg",
+    ],
   },
 
   {
@@ -40,7 +44,11 @@ const projects = [
     github: "",
     demo: "",
     private: false,
-    image: "",
+    images: [
+      "/projects/fixture/01.jpeg",
+      "/projects/fixture/02.jpeg",
+      "/projects/fixture/03.jpeg",
+    ],
   },
 
   {

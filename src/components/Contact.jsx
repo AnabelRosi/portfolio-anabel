@@ -90,17 +90,6 @@ function Contact() {
               ana1085@hotmail.com
             </Button>
 
-            <Button
-              startIcon={<Phone />}
-              href="tel:+542612717641"
-              sx={{
-                color: "text.primary",
-                textTransform: "none",
-                fontSize: "1rem",
-              }}
-            >
-              261 271-7641
-            </Button>
           </Stack>
 
           <Divider sx={{ mb: 4 }} />

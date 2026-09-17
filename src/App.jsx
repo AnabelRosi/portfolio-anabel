@@ -14,10 +14,12 @@ import darkTheme from "./theme/darkTheme";
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem("theme");
-    if (saved) return saved === "dark";
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  });
 
+    if (saved) return saved === "dark";
+
+    return false;
+  });
+  
   useEffect(() => {
     localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);

@@ -59,7 +59,7 @@ function Hero() {
                   fontWeight: 700,
                 }}
               >
-                👋 BIENVENIDO A MI PORTFOLIO
+                BIENVENIDO A MI PORTFOLIO
               </Typography>
 
               <Typography
@@ -153,14 +153,7 @@ function Hero() {
                 >
                   Descargar CV
                 </Button>
-
-                <Button
-                  startIcon={<Email />}
-                  size="large"
-                  href="mailto:ana1085@hotmail.com"
-                >
-                  Contactarme
-                </Button>
+                
               </Stack>
 
               <Stack
