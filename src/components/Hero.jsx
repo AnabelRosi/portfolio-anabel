@@ -9,7 +9,6 @@ import {
 
 import {
   Download,
-  Email,
   ArrowDownward,
   GitHub,
   LinkedIn,
