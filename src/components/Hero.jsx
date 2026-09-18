@@ -147,7 +147,7 @@ function Hero() {
                   variant="outlined"
                   startIcon={<Download />}
                   size="large"
-                  href="/cv.pdf"
+                  href={`${import.meta.env.BASE_URL}cv.pdf`}
                   download
                 >
                   Descargar CV
