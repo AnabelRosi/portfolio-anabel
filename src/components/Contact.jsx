@@ -72,25 +72,6 @@ function Contact() {
             trabajo, podés contactarme o visitar mis perfiles profesionales.
           </Typography>
 
-          {/* DATOS DE CONTACTO */}
-          <Stack
-            spacing={2}
-            alignItems="center"
-            sx={{ mb: 4 }}
-          >
-            <Button
-              startIcon={<Email />}
-              href="mailto:ana1085@hotmail.com"
-              sx={{
-                color: "text.primary",
-                textTransform: "none",
-                fontSize: "1rem",
-              }}
-            >
-              ana1085@hotmail.com
-            </Button>
-
-          </Stack>
 
           <Divider sx={{ mb: 4 }} />
 
