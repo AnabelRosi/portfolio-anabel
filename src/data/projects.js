@@ -1,3 +1,6 @@
+
+const base = import.meta.env.BASE_URL;
+
 const projects = [
   {
     id: 1,
@@ -9,9 +12,9 @@ const projects = [
     demo: "",
     private: true,
     images: [
-      "/projects/leerIA/01.jpeg",
-      "/projects/leerIA/02.jpeg",
-      "/projects/leerIA/03.jpeg",
+      `${base}/projects/leerIA/01.jpeg`,
+      `${base}/projects/leerIA/02.jpeg`,
+      `${base}/projects/leerIA/03.jpeg`,
     ],
   },
 
@@ -29,9 +32,9 @@ const projects = [
     demo: "",
     private: true,
     images: [
-      "/projects/signIA/01.jpeg",
-      "/projects/signIA/02.jpeg",
-      "/projects/signIA/03.jpeg",
+      `${base}/projects/signIA/01.jpeg`,
+      `${base}/projects/signIA/02.jpeg`,
+      `${base}/projects/signIA/03.jpeg`,
     ],
   },
 
@@ -45,9 +48,9 @@ const projects = [
     demo: "",
     private: false,
     images: [
-      "/projects/fixture/01.jpeg",
-      "/projects/fixture/02.jpeg",
-      "/projects/fixture/03.jpeg",
+      `${base}/projects/fixture/01.jpeg`,
+      `${base}/projects/fixture/02.jpeg`,
+      `${base}/projects/fixture/03.jpeg`,
     ],
   },
 
@@ -61,9 +64,9 @@ const projects = [
     demo: "",
     private: true,
     images: [
-      "/projects/residuos/01.png",
-      "/projects/residuos/02.png",
-      "/projects/residuos/03.png",
+      `${base}/projects/residuos/01.png`,
+      `${base}/projects/residuos/02.png`,
+      `${base}/projects/residuos/03.png`,
     ],
   },
 ];
